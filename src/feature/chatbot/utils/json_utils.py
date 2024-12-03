@@ -1,7 +1,7 @@
 import json
 import os
 
-def save_to_json(data_dict, file_path="./feature/chatbot/utils/conversation_log.json"):
+def save_to_json(data_dict, file_path="./src/feature/chatbot/utils/conversation_log.json"):
     """Guarda un diccionario en un archivo JSON."""
     data = []
 
@@ -18,7 +18,7 @@ def save_to_json(data_dict, file_path="./feature/chatbot/utils/conversation_log.
         json.dump(data, file, indent=4)
 
 
-def load_from_json(file_path="./feature/chatbot/utils/conversation_log.json"):
+def load_from_json(file_path="./src/feature/chatbot/utils/conversation_log.json"):
     """Carga las conversaciones desde un archivo JSON."""
     if os.path.exists(file_path):
         with open(file_path, 'r') as file:
@@ -32,7 +32,7 @@ def clear_json(file_path="./feature/chatbot/utils/conversation_log.json"):
         json.dump([], file, indent=4)
 
 
-def get_all_data_from_json(file_path="./feature/chatbot/utils/conversation_log.json") -> dict:
+def get_all_data_from_json(file_path="./src/feature/chatbot/utils/conversation_log.json") -> dict:
     """
     Extrae todos los datos relevantes del archivo JSON utilizando `load_from_json`.
     
